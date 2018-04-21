@@ -1,92 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:gravity="center"
-    android:background="@color/colorAccent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="com.example.root.test.LoginActivity">
+    android:background="@color/colorAccent">
 
-    <ImageView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="50dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="0dp"
-        android:background="@drawable/logo" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Registration"
-        android:textColor="#FFFFFF"
-        android:gravity="center"
-        android:textSize="45sp"/>
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:background="@drawable/rounded_edit_text"
-        android:hint="Name"
-        android:layout_margin="10dp"
-        android:inputType="textPersonName"
-        android:textColor="#000000"
-        android:textColorHint="#FFFFFF"
-        android:gravity="center"/>
+        android:orientation="horizontal"
+        >
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:background="@drawable/rounded_edit_text"
-        android:hint="Email Address"
-        android:layout_margin="10dp"
-        android:inputType="textEmailAddress"
-        android:textColor="#000000"
-        android:textColorHint="#FFFFFF"
-        android:gravity="center"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/logo"
+            android:id="@+id/iv"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register Yourself"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/iv"
+            android:id="@+id/tv1"
+            android:textSize="40sp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv1"
+            android:id="@+id/name"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="Name"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@drawable/cursor_white"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHint="#FFFFFF"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:padding="7dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000"
+            android:textColorHint="#FFFFFF"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@drawable/cursor_white"
+            android:padding="7dp"
+            android:layout_below="@+id/name"
+            android:id="@+id/email"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="Password"
+            android:layout_margin="10dp"
+            android:padding="7dp"
+            android:inputType="textPassword"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@drawable/cursor_white"
+            android:textColor="#000000"
+            android:textColorHint="#FFFFFF"
+            android:gravity="center"
+            android:layout_below="@+id/email"
+            android:id="@+id/pass"/>
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:background="@drawable/rounded_edit_text"
-        android:hint="Password"
-        android:textColor="#FFFFFF"
-        android:layout_margin="10dp"
-        android:inputType="textPassword"
-        android:textColorHint="#FFFFFF"
-        android:gravity="center"/>
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:background="@drawable/rounded_edit_text"
-        android:hint="Contact Number"
-        android:layout_margin="10dp"
-        android:inputType="number"
-        android:textColor="#000000"
-        android:textColorHint="#FFFFFF"
-        android:gravity="center"/>
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:background="@drawable/rounded_edit_text"
-        android:hint="Address"
-        android:layout_margin="10dp"
-        android:inputType="textMultiLine"
-        android:textColor="#000000"
-        android:textColorHint="#FFFFFF"
-        android:gravity="center"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="Confirm Password"
+            android:layout_margin="10dp"
+            android:padding="7dp"
+            android:inputType="textPassword"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@drawable/cursor_white"
+            android:textColor="#000000"
+            android:textColorHint="#FFFFFF"
+            android:gravity="center"
+            android:layout_below="@+id/pass"
+            android:id="@+id/con_pass" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/pass"
+            android:background="@drawable/rounded_button"
+            android:layout_below="@+id/con_pass"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="18dp"
+            android:layout_marginRight="5dp"
+            android:text="Register"
+            android:textColor="#FFFFFF"
+            android:id="@+id/register"/>
 
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_margin="10dp"
-        android:text="Register"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/rounded_button"/>
-
+    </RelativeLayout>
 
 </ScrollView>
-

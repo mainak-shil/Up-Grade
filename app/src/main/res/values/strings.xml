@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">test</string>
+    <string name="app_name">gradeup</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="tab_text_1">HOME</string>
+    <string name="tab_text_2">MY COURSES</string>
+    <string name="tab_text_3">MY TUTORS</string>
+    <string name="tab_text_4">MY TUTORIALS</string>
+    <string name="action_Logout">Logout</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_tab">TabActivity</string>
 </resources>
