@@ -80,7 +80,6 @@ public class LoginActivity extends AppCompatActivity {
 
                 email = Email.getText().toString();
                 password = Pass.getText().toString();
-                //startActivity(new Intent(LoginActivity.this, Home.class));
 
                 if (email.equals("") && password.equals("")) {
                     builder.setTitle("Something went wrong...");
